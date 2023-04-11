@@ -69,7 +69,7 @@ class MATRIXD
 			}
 
 			while (QuantityDiag > CompletedDiag) {
-				printf("SumDownDiag = ");
+				printf("Sum = ");
 				for (int c = 0; c <= StartDiagonal[numb2] * 4; ++c) {
 					for (int i = 0; i < N; i++) {
 						for (int j = 0; j < M; j++) {
@@ -110,7 +110,7 @@ class MATRIXD
 		void dynamic_array_work2(int** A, size_t N, size_t M, int StartDiag) { //Exercise 2
 
 			int SumDownDiag = 0;
-			printf("SumDownDiag = ");
+			printf("Sum = ");
 			for (int c = 0; c < StartDiag * 4; c++) {
 				for (int i = 0; i < N; i++) {
 					for (int j = 0; j < M; j++) {
