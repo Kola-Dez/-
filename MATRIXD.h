@@ -121,8 +121,8 @@ private:
 	void dynamic_array_test(size_t N, size_t M, int NUM, int Type) {
 		int** A = dynamic_array_alloc(N, M);
 		dynamic_array_rand(A, N, M);
-		if(Type == 1){ 
-			dynamic_array_work1(A, N, M, NUM); 
+		if (Type == 1) {
+			dynamic_array_work1(A, N, M, NUM);
 		}
 		else if (Type == 2) {
 			dynamic_array_work2(A, N, M, NUM);
@@ -143,6 +143,11 @@ public:
 
 			cout << "Input type opiration (1,2) = ";
 			cin >> type;
+			if(type != 1 && type != 2) {
+				cout << "error!";
+				break;
+			}
+
 			cout << "\nMATRIX_HEIGHT = ";
 			cin >> MATRIX_HEIGHT;
 			cout << "\n";
@@ -161,6 +166,10 @@ public:
 				cout << "Start Diagonal = ";
 				cin >> NUM;
 				dynamic_array_test(MATRIX_HEIGHT, MATRIX_WIDTH, NUM, type);
+			}
+			else {
+				cout << "error!";
+				exit(1);
 			}
 
 			cout << "Do you want continue next operation? \n Yes = 1 \n No = 0 \n You input << ";
