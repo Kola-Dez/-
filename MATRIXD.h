@@ -11,8 +11,6 @@ private:
 			printf("\n");
 		}
 	}
-
-private:
 	int** dynamic_array_alloc(size_t N, size_t M) { //Allocate space for the matrix
 
 		int** A = (int**)malloc(N * sizeof(int*));
@@ -27,15 +25,12 @@ private:
 		return A;
 	}
 
-private:
 	void dynamic_array_free(int** A, size_t N) { //Freeing Matrix Data
 		for (int i = 0; i < N; i++) {
 			free(A[i]);
 		}
 		free(A);
 	}
-
-private:
 	void dynamic_array_rand(int** A, size_t N, size_t M) { //Filling a Matrix with Random Values
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < M; j++) {
@@ -44,7 +39,6 @@ private:
 		}
 	}
 
-private:
 	void dynamic_array_work1(int** A, size_t N, size_t M, int QuantityDiag) { //Exercise 1
 
 		int CompletedDiag = 0;
@@ -105,8 +99,6 @@ private:
 
 
 	}
-
-private:
 	void dynamic_array_work2(int** A, size_t N, size_t M, int StartDiag) { //Exercise 2
 
 		int SumDownDiag = 0;
@@ -125,7 +117,7 @@ private:
 	}
 
 
-public:
+
 	void dynamic_array_test(size_t N, size_t M, int NUM, int Type) {
 		int** A = dynamic_array_alloc(N, M);
 		dynamic_array_rand(A, N, M);
